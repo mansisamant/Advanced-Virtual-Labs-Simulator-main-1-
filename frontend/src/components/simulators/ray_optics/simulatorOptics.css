@@ -1,0 +1,164 @@
+/* Ray Optics Simulator Styles */
+.simulator-optics {
+  --primary-color: #4299e1;
+  --secondary-color: #3182ce;
+  --success-color: #38a169;
+  --warning-color: #d69e2e;
+  --danger-color: #e53e3e;
+  --purple-color: #805ad5;
+  
+  font-family: 'Inter', 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f7fafc;
+}
+
+/* Header Styles */
+.simulator-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.simulator-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #1a202c;
+  position: relative;
+  display: inline-block;
+}
+
+.simulator-header h1:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.explanation-tip {
+  background: linear-gradient(120deg, #ebf8ff, #bee3f8);
+  border-radius: 12px;
+  padding: 0.8rem 1.5rem;
+  color: #2b6cb0;
+  display: inline-flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 1rem auto 0;
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.15);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.tip-icon {
+  font-size: 1.3rem;
+  margin-right: 0.7rem;
+}
+
+/* Configuration Toggle */
+.config-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem 0 1.5rem;
+}
+
+.config-toggle-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.config-toggle-btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.config-toggle-btn.active {
+  background-color: var(--secondary-color);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Layout Styles */
+.simulator-layout {
+  display: grid;
+  grid-template-columns: minmax(250px, 300px) minmax(500px, 1fr) minmax(250px, 300px);
+  grid-gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .simulator-layout {
+    grid-template-columns: minmax(250px, 300px) minmax(400px, 1fr);
+    grid-template-areas: 
+      "controls canvas"
+      "properties canvas";
+  }
+  
+  .simulator-layout > *:nth-child(1) {
+    grid-area: controls;
+  }
+  
+  .simulator-layout > *:nth-child(2) {
+    grid-area: canvas;
+    grid-row: span 2;
+  }
+  
+  .simulator-layout > *:nth-child(3) {
+    grid-area: properties;
+  }
+}
+
+@media (max-width: 900px) {
+  .simulator-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "controls"
+      "canvas" 
+      "properties";
+  }
+  
+  .simulator-layout > *:nth-child(2) {
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .simulator-optics {
+    padding: 1rem;
+  }
+  
+  .simulator-header h1 {
+    font-size: 2rem;
+  }
+  
+  .explanation-tip {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
+}

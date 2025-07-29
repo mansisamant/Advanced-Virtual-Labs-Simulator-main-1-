@@ -1,0 +1,36 @@
+[
+  {
+    "_id": "user_1001",
+    "email": "john.smith@example.com",
+    "name": "John Smith",
+    "role": "student",
+    "enrolled_labs": ["physics_mechanics", "electronics_circuit"],
+    "progress": {
+      "exp_8085_microprocessor": {
+        "completed": true,
+        "score": 85,
+        "last_attempt": "2023-05-09T12:34:00Z",
+        "attempts": 2
+      },
+      "exp_free_fall": {
+        "completed": true,
+        "score": 92,
+        "last_attempt": "2023-05-10T14:22:00Z",
+        "attempts": 1
+      },
+      "exp_ohms_law": {
+        "completed": false,
+        "score": null,
+        "last_attempt": "2023-05-12T09:45:00Z",
+        "attempts": 1
+      }
+    },
+    "preferences": {
+      "dark_mode": true,
+      "language": "en",
+      "notifications_enabled": true
+    },
+    "created_at": "2023-04-15T08:30:00Z",
+    "last_login": "2023-05-12T09:30:00Z"
+  }
+]

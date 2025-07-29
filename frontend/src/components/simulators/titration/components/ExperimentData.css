@@ -1,0 +1,113 @@
+.experiment-data-section {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.experiment-data-section h2 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.experiment-data-section h3 {
+  color: #34495e;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.experiment-data-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .experiment-data-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.notes-section, .saved-experiments-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.notes-section textarea {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  height: 150px;
+  margin-bottom: 10px;
+  padding: 10px;
+  resize: vertical;
+}
+
+.experiment-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.save-button, .load-button {
+  background-color: #3498db;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+.save-button:hover {
+  background-color: #2980b9;
+}
+
+.load-button {
+  background-color: #2ecc71;
+}
+
+.load-button:hover {
+  background-color: #27ae60;
+}
+
+.save-button:disabled, .load-button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.saved-results {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.saved-results select {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+}
+
+.status-message {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  color: #155724;
+  margin-bottom: 15px;
+  padding: 10px;
+  text-align: center;
+}
+
+.login-prompt {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  color: #721c24;
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+}

@@ -1,0 +1,25 @@
+.console-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.console-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(94, 234, 212, 0.2),
+        transparent
+    );
+    transform: rotate(45deg);
+    transition: 0.75s;
+}
+
+.console-btn:hover::before {
+    transform: rotate(45deg) translate(50%, 50%);
+}

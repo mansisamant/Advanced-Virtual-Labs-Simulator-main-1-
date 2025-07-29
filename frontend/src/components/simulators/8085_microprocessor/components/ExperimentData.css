@@ -1,0 +1,106 @@
+.experiment-data {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background: #1e293b;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #e2e8f0;
+}
+
+.experiment-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.notes-textarea {
+  width: 100%;
+  min-height: 120px;
+  resize: vertical;
+  padding: 0.75rem;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #f8fafc;
+  border-radius: 6px;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.notes-textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+}
+
+.notes-controls, .results-controls {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #0ea5e9;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #0284c7;
+}
+
+.btn-secondary {
+  background: #475569;
+  color: white;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #334155;
+}
+
+.saved-results {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.results-select {
+  width: 100%;
+  padding: 0.5rem;
+  background: #0f172a;
+  color: #f8fafc;
+  border: 1px solid #334155;
+  border-radius: 6px;
+}
+
+.login-prompt {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(244, 63, 94, 0.1);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  border-radius: 6px;
+  color: #fda4af;
+  text-align: center;
+}

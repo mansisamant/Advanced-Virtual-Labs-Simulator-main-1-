@@ -1,0 +1,35 @@
+/* Custom Scrollbar for Webkit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937; /* gray-800 */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #14b8a6; /* teal-500 */
+  border-radius: 8px;
+  border: 2px solid #1f2937; /* Border to create padding effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0f766e; /* teal-700 */
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #14b8a6 #1f2937; /* teal-500 and gray-800 */
+}
+
+/* For the chat container specifically */
+.chat-scrollbar::-webkit-scrollbar-thumb {
+  background: #14b8a6; /* teal-500 */
+}
+
+.chat-scrollbar::-webkit-scrollbar-track {
+  background: #1f2937; /* gray-800 */
+}

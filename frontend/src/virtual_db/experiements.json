@@ -1,0 +1,141 @@
+[
+  {
+    "_id": "exp_ray_optics",
+    "lab_id": "physics_optics",
+    "name": "Ray Optics Simulator",
+    "description": "Interactive simulator for ray optics demonstrating image formation using concave/convex lenses and mirrors. Visualize ray diagrams and understand the principles of geometric optics.",
+    "instructions": "1. Select the type of optical element (concave/convex lens or mirror).\n2. Adjust the focal length using the slider.\n3. Move the object to different positions.\n4. Observe how the image forms and its properties.\n5. Toggle ray visualization and numerical values.",
+    "thumbnail": "/images/experiment.png",
+    "difficulty": "Intermediate",
+    "estimated_time": "45 mins",
+    "assets": {
+      "scripts": ["rayOptics.js"],
+      "styles": ["simulatorOptics.css"]
+    },
+    "input_config": {
+      "element_type": { "type": "dropdown", "options": ["Convex Lens", "Concave Lens", "Concave Mirror", "Convex Mirror"], "default": "Convex Lens" },
+      "focal_length": { "type": "number", "unit": "cm", "default": 10, "min": 1, "max": 30 },
+      "object_distance": { "type": "number", "unit": "cm", "default": 20, "min": 5, "max": 50 }
+    },
+    "output_config": {
+      "image_distance": { "formula": "1/f = 1/v ± 1/u", "unit": "cm" },
+      "magnification": { "formula": "M = -v/u", "unit": "" }
+    },
+    "render_type": "iframe",
+    "module_url": "/simulator/optics"
+  },
+  {
+    "_id": "exp_light_refraction",
+    "lab_id": "physics_optics",
+    "name": "Light Refraction Experiment",
+    "description": "Explore the phenomenon of light refraction by observing how light bends when passing through different mediums.",
+    "instructions": "1. Select the medium for the light to pass through (e.g., water, glass, air).\n2. Adjust the angle of incidence using the slider.\n3. Observe the refracted ray and measure the angle of refraction.\n4. Record your observations and compare with Snell's Law.",
+    "thumbnail": "/images/refraction-thumbnail.png",
+    "difficulty": "Beginner",
+    "estimated_time": "30 mins",
+    "assets": {
+      "scripts": ["refraction.js"],
+      "styles": ["style.css"]
+    },
+    "input_config": {
+      "angle_of_incidence": { "type": "number", "unit": "degrees", "default": 30, "min": 0, "max": 90 },
+      "medium": { "type": "dropdown", "options": ["Air", "Water", "Glass"], "default": "Air" }
+    },
+    "output_config": {
+      "angle_of_refraction": { "formula": "Snell's Law", "unit": "degrees" }
+    },
+    "render_type": "iframe",
+    "module_url": "/simulator/8085"
+  },{
+    "_id": "exp_8085_microprocessor2",
+    "lab_id": "logic_design_microprocessor2",
+    "name": "8085 Microprocessor Simulator",
+    "description": "Simulate the 8085 microprocessor and learn about its architecture, instruction set, and programming. Write and execute assembly language programs in a virtual environment.",
+    
+    "instructions": "1. Write your assembly code in the editor\n2. Press 'Load Code' to parse the program\n3. Press 'Run' to execute the entire program\n4. Use 'Step' to execute one instruction at a time\n5. Monitor registers, flags, and memory values\n6. Press 'Reset' to start over",
+    "thumbnail": "/images/lab-thumbnail.png",
+    "difficulty": "Advanced",
+    "estimated_time": "90 mins",
+    "assets": {
+      "scripts": ["microprocessor.js"],
+      "styles": ["style.css"]
+    },
+    "input_config": {
+      "code": { "type": "textarea", "default": "", "placeholder": "Write your assembly code here..." }
+    },
+    "output_config": {
+      "output": { "formula": "", "unit": "" }
+    },
+    "render_type": "iframe",
+    "module_url": "/simulator/8085",
+    "created_at": "2023-06-15"
+  },{
+    "_id": "exp_3d_titration",
+    "lab_id": "chemistry_lab",
+    "name": "3D Titration Experiment",
+    "description": "Perform a 3D titration to neutralize an acid with a base. Observe the color change of the indicator as the reaction completes.",
+    "instructions": "1. Add titrant to the acid solution using the control panel.\n2. Observe the color change in the beaker as the reaction progresses.\n3. Stop adding titrant when the solution is neutralized (pink color).\n4. Record the volume of titrant used.",
+    "thumbnail": "/images/chemistry.jpeg",
+    "difficulty": "Beginner",
+    "estimated_time": "30 mins",
+    "assets": {
+      "scripts": ["reactionLogic3D.js"],
+      "styles": ["simulatorTitration.css"]
+    },
+    "input_config": {
+      "titrant_volume": { "type": "number", "unit": "mL", "default": 0, "min": 0, "max": 50 }
+    },
+    "output_config": {
+      "reaction_status": { "formula": "Neutralized when volume >= 25 mL", "unit": "" }
+    },
+    "render_type": "iframe",
+    "module_url": "/simulator/titration"
+  },
+  {
+    "_id": "exp_ohms_law",
+    "lab_id": "electronics_lab",
+    "name": "Ohm's Law Simulator",
+    "description": "Interactive circuit simulator demonstrating Ohm's Law through a hands-on approach. Connect resistors, ammeters, and voltmeters to build circuits and understand the relationship between voltage, current, and resistance.",
+    "instructions": "1. Drag components (resistors, ammeter, voltmeter) onto the circuit board.\n2. Connect components by clicking on terminals to create wires.\n3. Adjust the voltage using the control sliders.\n4. Observe how changing resistance affects current in real-time.\n5. Record measurements in the data table for analysis.",
+    "thumbnail": "/images/Electronics.jpg",
+    "difficulty": "Beginner",
+    "estimated_time": "45 mins",
+    "assets": {
+      "scripts": ["ohmsLaw.js", "circuitLogic.js"],
+      "styles": ["simulatorCircuit.css"]
+    },
+    "input_config": {
+      "voltage": { "type": "slider", "unit": "V", "default": 5, "min": 0, "max": 12 },
+      "resistance": { "type": "slider", "unit": "Ω", "default": 100, "min": 10, "max": 1000 }
+    },
+    "output_config": {
+      "current": { "formula": "I = V/R", "unit": "A" },
+      "power": { "formula": "P = V*I", "unit": "W" }
+    },
+    "render_type": "iframe",
+    "module_url": "/simulator/ohms-law",
+    "created_at": "2025-05-16"
+},
+{
+  "_id": "exp_process_scheduler",
+  "lab_id": "cse_os",
+  "name": "CPU Scheduling Algorithms",
+  "description": "Visualize and compare different CPU scheduling algorithms",
+  "instructions": "1. Add processes with different parameters\n2. Select a scheduling algorithm\n3. Run the simulation to observe scheduling behavior\n4. Compare performance metrics across algorithms",
+  "difficulty": "Intermediate",
+  "render_type": "iframe",
+  "module_url": "/simulator/process-scheduler",
+  "thumbnail": "/images/operatingSystem.jpg"
+},
+{
+  "_id": "exp_network_topology",
+  "lab_id": "cse_networks",
+  "name": "Network Topology & Routing",
+  "description": "Build and simulate computer networks with various devices",
+  "instructions": "1. Create a network topology with routers, switches and PCs\n2. Configure network parameters\n3. Run the simulation to observe packet flow\n4. Use terminal commands to test connectivity",
+  "difficulty": "Advanced",
+  "render_type": "iframe",
+  "module_url": "/simulator/network-sim",
+  "thumbnail": "/images/computerNetwork.jpg"
+}
+]

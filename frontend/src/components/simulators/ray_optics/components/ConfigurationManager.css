@@ -1,0 +1,285 @@
+.config-manager {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.config-manager:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.save-section {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Tabs */
+.config-tabs {
+  display: flex;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tab-btn {
+  padding: 0.75rem 1.25rem;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #718096;
+  transition: all 0.2s;
+}
+
+.tab-btn.active {
+  color: #4299e1;
+  border-bottom-color: #4299e1;
+}
+
+.tab-btn:hover:not(.active) {
+  color: #4a5568;
+  border-bottom-color: #e2e8f0;
+}
+
+.config-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.config-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.config-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.save-btn {
+  background-color: #4299e1;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #3182ce;
+  transform: translateY(-2px);
+}
+
+.share-btn {
+  background-color: #9f7aea;
+  color: white;
+}
+
+.share-btn:hover {
+  background-color: #805ad5;
+  transform: translateY(-2px);
+}
+
+.saved-configs {
+  margin-top: 1rem;
+}
+
+.saved-configs h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: #2d3748;
+}
+
+.config-list {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.config-item {
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.config-item:last-child {
+  border-bottom: none;
+}
+
+.config-details {
+  flex: 1;
+}
+
+.config-details h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #2d3748;
+}
+
+.config-details p {
+  margin: 0.3rem 0 0 0;
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+.preset-item {
+  background-color: #f8fafc;
+}
+
+.preset-description {
+  margin-top: 0.5rem !important;
+  color: #4a5568 !important;
+  font-style: italic;
+}
+
+/* Empty state */
+.empty-state {
+  padding: 2rem;
+  text-align: center;
+  color: #718096;
+}
+
+.empty-state p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.config-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.config-action-btn {
+  padding: 0.3rem 0.6rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.load-btn {
+  background-color: #68d391;
+  color: white;
+}
+
+.load-btn:hover {
+  background-color: #48bb78;
+}
+
+.delete-btn {
+  background-color: #fc8181;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #f56565;
+}
+
+/* Share modal styling */
+.share-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.share-modal {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.share-modal h3 {
+  margin-top: 0;
+  color: #2d3748;
+  font-size: 1.2rem;
+}
+
+.share-url-container {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.share-url-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px 0 0 6px;
+  font-size: 0.9rem;
+}
+
+.copy-btn {
+  padding: 0 1rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.copy-btn:hover {
+  background-color: #3182ce;
+}
+
+.close-modal-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #edf2f7;
+  color: #2d3748;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+}
+
+.close-modal-btn:hover {
+  background-color: #e2e8f0;
+}
+
+@media (max-width: 768px) {
+  .save-section {
+    flex-direction: column;
+  }
+  
+  .config-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .config-actions {
+    margin-top: 0.5rem;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,158 @@
+.properties-panel {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  min-width: 280px;
+  max-width: 320px;
+  transition: all 0.3s ease;
+}
+
+.properties-panel:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.properties-panel h2 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  position: relative;
+}
+
+.properties-panel h2::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background-color: #4299e1;
+  left: 0;
+  bottom: -8px;
+  border-radius: 2px;
+}
+
+.properties-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.badge {
+  padding: 0.35em 0.65em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-success {
+  background-color: #c6f6d5;
+  color: #2f855a;
+}
+
+.badge-warning {
+  background-color: #feebc8;
+  color: #c05621;
+}
+
+.badge-purple {
+  background-color: #e9d8fd;
+  color: #6b46c1;
+}
+
+.badge-info {
+  background-color: #bee3f8;
+  color: #2b6cb0;
+}
+
+.badge-secondary {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.properties-table {
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+}
+
+.property-row {
+  display: flex;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.2s;
+}
+
+.property-row:last-child {
+  border-bottom: none;
+}
+
+.property-row:hover {
+  background-color: #f0f4f8;
+}
+
+.property-row.highlight {
+  background-color: #ebf8ff;
+}
+
+.property-row.highlight:hover {
+  background-color: #e6f6ff;
+}
+
+.property-label {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  color: #4a5568;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.property-value {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+.formula-section {
+  margin-top: 1.5rem;
+}
+
+.formula-section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #4a5568;
+}
+
+.formula {
+  margin-bottom: 0.8rem;
+  padding: 0.8rem;
+  background-color: #f8fafc;
+  border-radius: 6px;
+  border-left: 3px solid #4299e1;
+}
+
+.formula-name {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-bottom: 0.3rem;
+}
+
+.formula-expression {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+@media (max-width: 768px) {
+  .properties-panel {
+    max-width: 100%;
+  }
+}

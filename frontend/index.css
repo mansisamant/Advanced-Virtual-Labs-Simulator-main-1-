@@ -1,0 +1,10 @@
+:root{
+  --body_background: #f0f4f8;
+  --body_color: black;
+  --link_color: navy;
+}
+[data-theme='dark'] {
+  --body_background: #121212;
+  --body_color: white;
+  --link_color: #bb86fc;
+}

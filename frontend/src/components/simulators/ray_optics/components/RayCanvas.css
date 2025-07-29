@@ -1,0 +1,154 @@
+.ray-canvas-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.ray-canvas-container:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.ray-canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-color: #fbfcfd;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Canvas tools */
+.canvas-tools {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.canvas-tool-button {
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #4a5568;
+  transition: all 0.2s ease;
+}
+
+.canvas-tool-button:hover {
+  background-color: #f7fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #4299e1;
+}
+
+/* Tooltip */
+.canvas-tooltip {
+  position: relative;
+}
+
+.tooltip-icon {
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #4a5568;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.tooltip-icon:hover {
+  background-color: #f7fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #4299e1;
+}
+
+.tooltip-content {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background-color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+
+.canvas-tooltip:hover .tooltip-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.tooltip-content p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+/* Canvas legend */
+.canvas-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 24px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.legend-text {
+  font-size: 0.85rem;
+  color: #4a5568;
+}
+
+@media (max-width: 768px) {
+  .ray-canvas-container {
+    padding: 0.5rem;
+  }
+  
+  .canvas-tools {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  
+  .canvas-legend {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}

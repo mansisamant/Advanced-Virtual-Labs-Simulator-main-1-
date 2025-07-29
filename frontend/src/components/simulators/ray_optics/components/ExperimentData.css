@@ -1,0 +1,123 @@
+.experiment-data-panel {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.experiment-data-title {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.experiment-data-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .experiment-data-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.notes-section, .results-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.notes-section h4, .results-section h4 {
+  color: #555;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.notes-textarea {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: 120px;
+  margin-bottom: 10px;
+  padding: 10px;
+  resize: vertical;
+  width: 100%;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.save-button, .load-button {
+  background-color: #3498db;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 8px 15px;
+  transition: background-color 0.2s;
+}
+
+.save-button:hover, .load-button:hover {
+  background-color: #2980b9;
+}
+
+.save-button:disabled, .load-button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.saved-results {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.results-select {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+}
+
+.message {
+  border-radius: 4px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.message.success {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.message.info {
+  background-color: #d1ecf1;
+  border: 1px solid #bee5eb;
+  color: #0c5460;
+}
+
+.login-prompt {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  color: #721c24;
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+}
